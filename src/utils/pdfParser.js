@@ -6,6 +6,6 @@ export async function parsePDF(buffer) {
     return data.text;
   } catch (error) {
     console.error('PDF parsing error:', error);
-    throw new Error('Failed to parse PDF');
+    throw new Error('Failed to parse PDF: ' + error.message);
   }
 }

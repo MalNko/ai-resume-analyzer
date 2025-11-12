@@ -4,7 +4,10 @@ const AnalysisSchema = new mongoose.Schema({
   originalFilename: String,
   fileSize: Number,
   textContent: String,
-  overallScore: Number,
+  overallScore: {
+    type: Number,
+    default: 0
+  },
   skillsAnalysis: [{
     name: String,
     score: Number
