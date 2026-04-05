@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    # Restart automatically if it crashes
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    # Wait for backend to be up before starting frontend
+    depends_on:
+      - backend
+    environment:
+      # Needed for CRA to run in Docker without exiting immediately
+      - CHOKIDAR_USEPOLLING=true
+      - WDS_SOCKET_PORT=0
+    restart: unless-stopped
