@@ -1,11 +1,34 @@
-# dependencies
+# Dependencies
 node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
 
-# next.js build
-.next/
-
-# local env
+# Environment variables — NEVER commit
+.env
 .env.local
+.env.production
+.env.development
+*.env
 
-# logs
+# Build output
+.next/
+build/
+dist/
+
+# Python
+*.egg-info/
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
 *.log
+npm-debug.log*
