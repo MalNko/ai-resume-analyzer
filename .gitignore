@@ -32,3 +32,13 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+.env
+.env.local
+*.env
+.next/
+.venv/
+venv/
+src/
+public/
+node_modules/
